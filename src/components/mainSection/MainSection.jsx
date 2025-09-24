@@ -5,14 +5,14 @@ import TaskStatus from './TaskStatus';
 
 const MainSection = () => {
     return (
-        <section>
-            <Container>
-                <div className='grid gap-5 grid-cols-1 md:grid-cols-12'>
-                <CustomerTickets></CustomerTickets>
-                <TaskStatus></TaskStatus>
-                </div>
-            </Container>
-        </section>
+        <>
+        <Container>
+            <div className='grid gap-5 grid-cols-12 py-10 '>
+            <CustomerTickets></CustomerTickets>
+            <TaskStatus></TaskStatus>
+            </div>
+        </Container>
+        </>
     );
 };
 
