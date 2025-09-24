@@ -4,14 +4,9 @@
 @plugin "daisyui";
 
 
-/* .inter-font {
+.inter-font {
   font-family: "Inter", sans-serif;
-} */
-.btn-gradient{
-  background: var(--Gradient/Linear, linear-gradient(125.07deg, rgba(99, 46, 227, 1),rgba(159, 98, 242, 1) 100%));
 }
-
-@theme{
-  --font-family: "Inter", sans-serif;
-  --color-acua: #4cd9c8;
+.btn-gradient{
+  background: linear-gradient(125.07deg, rgba(99, 46, 227, 1),rgba(159, 98, 242, 1) 100%);
 }
