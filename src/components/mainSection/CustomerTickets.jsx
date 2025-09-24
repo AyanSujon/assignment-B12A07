@@ -3,7 +3,7 @@ import React from 'react';
 const CustomerTickets = () => {
     return (
         <div className='col-span-12 md:col-span-9 h-100 border-2 border-amber-100'>
-            <h2 className='mb-3 font-semibold text-2xl text-[#34485A]'>Task Status</h2>
+            <h2 className='mb-3 font-semibold text-2xl text-[#34485A]'>Customer Tickets</h2>
             <div id='customer-tickets-container'>
                 <div className="customer-tickets-card">
                     <div className="card card-dash bg-base-100 w-96">
