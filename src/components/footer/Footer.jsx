@@ -38,10 +38,10 @@ const Footer = () => {
                     <div className='col-span-12 md:col-span-6 lg:col-span-3'>
                         <h3 className='font-bold text-xl mb-4'>Social Links</h3>
                         <ul className='space-y-4'>
-                            <li><a href="#"><span className='bg-white hover:bg-gray-300 transition duration-300 ease-in-out text-black p-1 rounded-full'><i class="fa-brands fa-x-twitter"></i></span> @CS — Ticket System</a></li>
-                            <li><a href="#"><span className='bg-white hover:bg-gray-300 transition duration-300 ease-in-out text-black p-1 rounded-full'><i class="fa-brands fa-linkedin-in"></i></span> @CS — Ticket System</a></li>
-                            <li><a href="#"><span className='bg-white hover:bg-gray-300 transition duration-300 ease-in-out text-black p-1 rounded-full'><i class="fa-brands fa-facebook-f"></i></span> @CS — Ticket System</a></li>
-                            <li><a href="mailto:support@cst.com"><span className='bg-white hover:bg-gray-300 transition duration-300 ease-in-out text-black p-1 rounded-full'><i class="fa-solid fa-envelope"></i></span> support@cst.com</a></li>
+                            <li><a href="#"><span className='bg-white hover:bg-gray-300 transition duration-300 ease-in-out text-black p-1 rounded-full'><i className="fa-brands fa-x-twitter"></i></span> @CS — Ticket System</a></li>
+                            <li><a href="#"><span className='bg-white hover:bg-gray-300 transition duration-300 ease-in-out text-black p-1 rounded-full'><i className="fa-brands fa-linkedin-in"></i></span> @CS — Ticket System</a></li>
+                            <li><a href="#"><span className='bg-white hover:bg-gray-300 transition duration-300 ease-in-out text-black p-1 rounded-full'><i className="fa-brands fa-facebook-f"></i></span> @CS — Ticket System</a></li>
+                            <li><a href="mailto:support@cst.com"><span className='bg-white hover:bg-gray-300 transition duration-300 ease-in-out text-black p-1 rounded-full'><i className="fa-solid fa-envelope"></i></span> support@cst.com</a></li>
                         </ul>
                     </div>
                 </section>

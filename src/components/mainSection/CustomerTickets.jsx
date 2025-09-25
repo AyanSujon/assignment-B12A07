@@ -4,6 +4,9 @@ import TicketCard from './TicketCard';
 
 const CustomerTickets = () => {
 
+fetch('/customerTicketsData.json')
+  .then(response => response.customerData())
+  .then(customerData => console.log(customerData))
 
 
 // const TicketCard Data = 

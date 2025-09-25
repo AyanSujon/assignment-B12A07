@@ -7,10 +7,10 @@ const TaskStatus = () => {
                 <h2 className='mb-3 font-semibold text-2xl text-[#34485A]'>Task Status</h2>
                 <div id='task-status-card' className="space-y-3">
                     <p className='text-[#627382]'>Select a ticket to add to Task Status</p>
-                    <div class="card bg-base-100 card-xs shadow-sm">
-                    <div class="card-body">
-                        <h2 class="card-title">Payment Failed - Card Declined</h2>
-                        <div class="justify-end card-actions">
+                    <div className="card bg-base-100 card-xs shadow-sm">
+                    <div className="card-body">
+                        <h2 className="card-title">Payment Failed - Card Declined</h2>
+                        <div className="justify-end card-actions">
                         <button className="btn w-full bg-[#02A53B] text-white">Complete</button>
                         </div>
                     </div>
@@ -22,9 +22,9 @@ const TaskStatus = () => {
                 <h2 className='mb-3 font-semibold text-2xl text-[#34485A]'>Resolved Task</h2>
                 <div id='resolved-task-card' className="space-y-3">
                     <p className='text-[#627382]'>No resolved tasks yet.</p>
-                    <div class="card bg-[#E0E7FF] card-xs shadow-sm">
-                    <div class="card-body">
-                        <h2 class="card-title">Incorrect Billing Address</h2>
+                    <div className="card bg-[#E0E7FF] card-xs shadow-sm">
+                    <div className="card-body">
+                        <h2 className="card-title">Incorrect Billing Address</h2>
                     </div>
                     </div>
                 </div>
