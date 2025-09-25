@@ -1,16 +1,11 @@
-import React from 'react';
+import React, { use } from 'react';
 import TicketCard from './TicketCard';
 // import TicketData from "./customerTicketsData";
 
-const CustomerTickets = () => {
+const CustomerTickets = ({fetchPromise}) => {
 
-fetch('/customerTicketsData.json')
-  .then(response => response.customerData())
-  .then(customerData => console.log(customerData))
-
-
-// const TicketCard Data = 
-
+const ticketData = use(fetchPromise);
+// console.log(ticketData);
 
     return (
         <div className='col-span-12 md:col-span-9 '>
@@ -19,10 +14,7 @@ fetch('/customerTicketsData.json')
                 <div id='customer-tickets-container' className="customer-tickets-card grid grid-cols-12 gap-5">
                     {/* card */}
                     {
-                        <TicketCard></TicketCard>
-                    }
-                    {
-                        <TicketCard></TicketCard>
+                        <TicketCard ticketData={ticketData}></TicketCard>
                     }
                 </div>
             </div>
