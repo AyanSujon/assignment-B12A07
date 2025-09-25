@@ -2,7 +2,7 @@ import React from 'react';
 
 const TaskStatus = () => {
     return (
-        <div className=' col-span-12 md:col-span-3  h-100 border-2 border-red-100'>
+        <div className=' col-span-12 md:col-span-3 '>
             <div className='task-status-container'>
                 <h2 className='mb-3 font-semibold text-2xl text-[#34485A]'>Task Status</h2>
                 <div id='task-status-card' className="space-y-3">
