@@ -1,9 +1,13 @@
 
+import { useState } from 'react'
 import './App.css'
 import Footer from './components/footer/Footer'
 import Hero from './components/hero/Hero'
 import MainSection from './components/mainSection/MainSection'
 import Navbar from './components/navbar/Navbar'
+  import { ToastContainer, toast } from 'react-toastify';
+
+
 
 
   //  const ticketPromise = fetch("/customerTicketsData.json") // path is relative to public folder
@@ -22,6 +26,16 @@ function App() {
 const fetchPromise = fetchTicket();
 // console.log(fetchPromise);
 
+  const [tasks, setTasks] = useState([]);// keep track of selected tasks
+
+  // function to add task
+  const onAddTask = (ticket) => {
+    setTasks((prev) => [...prev, ticket]);
+    toast(`Added "${ticket.title}" to Task Status!!`);
+  };
+
+
+
   return (
     <>
       <header>
@@ -35,9 +49,12 @@ const fetchPromise = fetchTicket();
       </header>
 
       <main className='bg-[#F5F5F5]'>
-          <MainSection fetchPromise={fetchPromise}></MainSection>
+          <MainSection tasks={tasks} onAddTask={onAddTask} fetchPromise={fetchPromise} ></MainSection>
       </main>
           <Footer></Footer>
+          
+          <ToastContainer />
+
     </>
   )
 }

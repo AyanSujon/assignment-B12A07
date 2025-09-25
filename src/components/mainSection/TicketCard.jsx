@@ -1,13 +1,17 @@
 import React from 'react';
 import cardCalander from "../../assets/ri_calendar-line.png"
-const TicketCard = ({ticketData}) => {
+const TicketCard = ({ticketData,  onAddTask}) => {
     // console.log(ticketData);
 
     
     return (
         ticketData.map(ticket => 
 
-                    <div className="card bg-base-100 col-span-12 md:col-span-6">
+                    <div 
+                    key={ticket.id}
+                    onClick={() => onAddTask (ticket)}
+
+                    className="card bg-base-100 col-span-12 md:col-span-6">
                         <div className="card-body">
                             <div className='flex justify-between items-center'>
                                 <h2 className="title card-title text-lg">{ticket.title}</h2>

@@ -2,7 +2,7 @@ import React, { use } from 'react';
 import TicketCard from './TicketCard';
 // import TicketData from "./customerTicketsData";
 
-const CustomerTickets = ({fetchPromise}) => {
+const CustomerTickets = ({fetchPromise, onAddTask}) => {
 
 const ticketData = use(fetchPromise);
 // console.log(ticketData);
@@ -14,7 +14,7 @@ const ticketData = use(fetchPromise);
                 <div id='customer-tickets-container' className="customer-tickets-card grid grid-cols-12 gap-5">
                     {/* card */}
                     {
-                        <TicketCard ticketData={ticketData}></TicketCard>
+                        <TicketCard onAddTask={onAddTask} ticketData={ticketData}></TicketCard>
                     }
                 </div>
             </div>
