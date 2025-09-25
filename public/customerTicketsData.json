@@ -23,7 +23,7 @@
     "description": "Password reset emails are not being sent to the customer’s registered email address.",
     "customer": "Michael Brown",
     "priority": "High",
-    "status": "Open",
+    "status": "In Progress",
     "createdAt": "2024-02-18"
   },
   {
@@ -31,7 +31,7 @@
     "title": "App Crashing on Startup",
     "description": "Customer reports that the mobile app crashes immediately after opening on Android devices.",
     "customer": "Sophia Martinez",
-    "priority": "High",
+    "priority": "Low",
     "status": "Open",
     "createdAt": "2024-03-05"
   },
@@ -68,7 +68,7 @@
     "description": "Customer's account was locked due to multiple failed login attempts, and they need help unlocking it.",
     "customer": "Ava Thomas",
     "priority": "Medium",
-    "status": "Open",
+    "status": "Resolved",
     "createdAt": "2024-05-03"
   },
   {
@@ -104,7 +104,7 @@
     "description": "Customer suggests adding a dark mode option to improve user experience during nighttime use.",
     "customer": "Mia Lewis",
     "priority": "Low",
-    "status": "Closed",
+    "status": "Resolved",
     "createdAt": "2024-07-10"
   }
 ]
