@@ -48,13 +48,31 @@ STATE (স্টেট)
 
 স্টেটকে read এবং write দুটোভাবেই ব্যবহার করা যায়।
 
+>
+>>
+>>>>
 
+What is the useState hook, and how does it work?
+>
+>>
+useState কী?
 
+useState হলো React-এর একটি Hook যা ফাংশনাল কম্পোনেন্টের ভেতরে state তৈরি ও ম্যানেজ করার জন্য ব্যবহার করা হয়।
+>
+>
+>
+কিভাবে কাজ করে?
 
+useState একটি array return করে যার মধ্যে দুইটি জিনিস থাকে:
 
 
+current state value (বর্তমান মান)
 
 
+state update করার জন্য একটি function
+>
+Syntax:
+const [state, setState] = useState(initialValue);
 
 
 
@@ -141,6 +159,18 @@ STATE (স্টেট)
 
 
 
+
+
+
+>>>>>
+
+
+
+
+>>>>>>
+>
+>
+>
 
 
 # React + Vite
