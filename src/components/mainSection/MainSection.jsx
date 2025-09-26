@@ -6,7 +6,7 @@ import TaskStatus from './TaskStatus';
 
 
 
-const MainSection = ({ onAddTask, tasks, onCompleteTask, tickets}) => {
+const MainSection = ({ onAddTask, tasks, onCompleteTask, tickets, resolvedTasks }) => {
 
 
 
@@ -18,7 +18,7 @@ const MainSection = ({ onAddTask, tasks, onCompleteTask, tickets}) => {
             <Suspense fallback={<div  className='grid col-span-12 md:col-span-9 justify-center items-center'><span className="loading loading-spinner loading-xl"></span></div>}>
                 <CustomerTickets tickets={tickets} onAddTask={onAddTask}></CustomerTickets>
             </Suspense>
-            <TaskStatus onCompleteTask={onCompleteTask} tasks={tasks}></TaskStatus>
+            <TaskStatus resolvedTasks={resolvedTasks} onCompleteTask={onCompleteTask} tasks={tasks}></TaskStatus>
             </div>
         </Container>
         </>

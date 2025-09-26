@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from '../container/Container';
 
-const Hero = ({tasks}) => {
+const Hero = ({tasks, resolvedTasks}) => {
     return (
         <>
         <Container>
@@ -15,7 +15,7 @@ const Hero = ({tasks}) => {
             <div className="resolved flex-1 hero-gradient-right rounded-lg text-center text-white ">
                 <div className="info hero-bg-image py-10 px-16">
                     <h2 className='text-2xl'>Resolved</h2>
-                    <h3 className='font-semibold text-6xl'>0</h3>
+                    <h3 className='font-semibold text-6xl'>{resolvedTasks.length}</h3>
                 </div>
             </div>
         </div>

@@ -25,6 +25,8 @@ function App() {
   const [tickets, setTickets] = useState([]); // All available tickets
     // console.log(tickets)
   const [tasks, setTasks] = useState([]);     // Selected tasks
+  const [resolvedTasks, setResolvedTasks] = useState([]); 
+
 
   useEffect(() => {
     fetchTicket().then((data) => setTickets(data));
@@ -42,6 +44,7 @@ function App() {
   const onCompleteTask = (completedTask) => {
     setTasks((prev) => prev.filter((t) => t.id !== completedTask.id));
     // setTickets((prev) => prev.filter((t) => t.id !== completedTask.id));
+     setResolvedTasks((prev) => [...prev, completedTask]); // add to resolved
     toast.success(`Completed "${completedTask.title}"👏!`);
     // console.log(completedTask)
   };
@@ -55,12 +58,12 @@ function App() {
         </nav>
 
           <section className='bg-[#F5F5F5]'>
-          <Hero tasks={tasks}></Hero>
+          <Hero tasks={tasks} resolvedTasks={resolvedTasks}></Hero>
           </section>
       </header>
 
       <main className='bg-[#F5F5F5]'>
-          <MainSection tickets={tickets} onCompleteTask={onCompleteTask} tasks={tasks} onAddTask={onAddTask} ></MainSection>
+          <MainSection resolvedTasks={resolvedTasks} tickets={tickets} onCompleteTask={onCompleteTask} tasks={tasks} onAddTask={onAddTask} ></MainSection>
       </main>
           <Footer></Footer>
           
