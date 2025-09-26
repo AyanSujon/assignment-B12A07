@@ -52,7 +52,7 @@ STATE (স্টেট)
 >>
 >>>>
 
-What is the useState hook, and how does it work?
+3. What is the useState hook, and how does it work?
 >
 >>
 useState কী?
@@ -83,7 +83,7 @@ const [state, setState] = useState(initialValue);
 
 
 
-How can you share state between components in React?
+4. How can you share state between components in React?
 
 >
 >>
@@ -91,7 +91,6 @@ How can you share state between components in React?
 ১. props
 >>
 >>Props হলো parent component থেকে child component-এ data পাঠানোর প্রক্রিয়া। এর মাধ্যমে যেকোনো JavaScript value (যেমন object, array, এমনকি function) পাঠানো যায়। এবং, child component কেবল props read করতে পারে, কিন্তু এটি পরিবর্তন করতে পারে না।
-
 
 
 
@@ -110,7 +109,15 @@ State সাধারণত parent component-এ রাখা হয়। প�
 
 
 >
->How is event handling done in React?
+> 5 How is event handling done in React?
+>
+
+React-এ event handling HTML-এর মতোই হয়, তবে এখানে camelCase syntax (যেমন onClick) ব্যবহার করা হয়।
+Event handler হিসেবে function-এর reference দিতে হয়, string নয়।
+React তার নিজস্ব SyntheticEvent system ব্যবহার করে, যা cross-browser compatibility নিশ্চিত করে।।
+>>
+
+>
 >
 
 
@@ -118,8 +125,11 @@ State সাধারণত parent component-এ রাখা হয়। প�
 
 
 
-
-
+>
+>
+>>
+.
+.
 
 
 
