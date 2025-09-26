@@ -14,9 +14,18 @@ JSX (JavaScript XML) হলো JavaScript-এর একটি extension বা J
 > 
 > সহজে কোড পড়া যায়
 
- 
+>>>
 
-
+>
+>
+>2 What is the difference between State and Props?
+>
+>React-এ State এবং Props দুইটাই data handle করার জন্য ব্যবহার হয়, কিন্তু এদের কাজ ভিন্ন।
+React JS-এ props এবং state-এর মূল পার্থক্য হলো, props ব্যবহার করা হয় এক কম্পোনেন্ট থেকে অন্য কম্পোনেন্টে ডাটা বা প্রপার্টি পাঠানোর জন্য, আর state সেই কম্পোনেন্টের ভেতরে থাকা রিয়েল-টাইম ডাটা পরিবর্তন করে বা ম্যানেজমেন্ট করে ।
+>
+>
+> 
+>
 
 
 
