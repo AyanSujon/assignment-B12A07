@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TaskStatus = ({tasks}) => {
+const TaskStatus = ({tasks, onCompleteTask}) => {
     return (
         <div className=' col-span-12 md:col-span-3 '>
             <div className='task-status-container'>
@@ -24,7 +24,7 @@ const TaskStatus = ({tasks}) => {
                                 <div className="card-body">
                                 <h2 className="card-title">{task.title}</h2>
                                 <div className="justify-end card-actions">
-                                    <button className="btn w-full bg-[#02A53B] text-white">Complete</button>
+                                    <button onClick={()=> onCompleteTask(task)} className="btn w-full bg-[#02A53B] text-white">Complete</button>
                                 </div>
                                 </div>
                             </div>
