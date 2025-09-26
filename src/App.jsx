@@ -1,6 +1,6 @@
 
 // import { useState } from 'react'
-import { useState, useEffect } from 'react'
+import { useState, useEffect} from 'react'
 
 import './App.css'
 import Footer from './components/footer/Footer'
@@ -18,45 +18,32 @@ const fetchTicket = async () => {
 }
 
 
+
 function App() {
- 
-const fetchPromise = fetchTicket();
-// console.log(fetchPromise);
 
-  // const [tasks, setTasks] = useState([]);// keep track of selected tasks
 
-    const [tickets, setTickets] = useState([]); // All available tickets
+  const [tickets, setTickets] = useState([]); // All available tickets
+    // console.log(tickets)
   const [tasks, setTasks] = useState([]);     // Selected tasks
 
-
-  // fetch data once
   useEffect(() => {
-    const fetchTicket = async () => {
-      const res = await fetch("/customerTicketsData.json");
-      const data = await res.json();
-      setTickets(data); // save tickets into state
-    };
-    fetchTicket();
+    fetchTicket().then((data) => setTickets(data));
   }, []);
-
-
-console.log(tickets)
-
 
 
   // function to add task
   const onAddTask = (ticket) => {
     setTasks((prev) => [...prev, ticket]);
     toast(`Added "${ticket.title}" to Task Status!!`);
-    // console.log(tasks);
+    setTickets((prev) => prev.filter((t) => t.id !== ticket.id));
 
   };
   // Complete task (remove from tickets + tasks)
   const onCompleteTask = (completedTask) => {
     setTasks((prev) => prev.filter((t) => t.id !== completedTask.id));
-    setTickets((prev) => prev.filter((t) => t.id !== completedTask.id));
-    toast.success(`Completed "${completedTask.title}" ✅`);
-    console.log(completedTask)
+    // setTickets((prev) => prev.filter((t) => t.id !== completedTask.id));
+    toast.success(`Completed "${completedTask.title}"👏!`);
+    // console.log(completedTask)
   };
 
 
@@ -73,7 +60,7 @@ console.log(tickets)
       </header>
 
       <main className='bg-[#F5F5F5]'>
-          <MainSection  onCompleteTask={onCompleteTask} tasks={tasks} onAddTask={onAddTask} fetchPromise={fetchPromise} ></MainSection>
+          <MainSection tickets={tickets} onCompleteTask={onCompleteTask} tasks={tasks} onAddTask={onAddTask} ></MainSection>
       </main>
           <Footer></Footer>
           

@@ -1,11 +1,10 @@
-import React, { use } from 'react';
+
 import TicketCard from './TicketCard';
-// import TicketData from "./customerTicketsData";
 
-const CustomerTickets = ({fetchPromise, onAddTask}) => {
 
-const ticketData = use(fetchPromise);
-// console.log(ticketData);
+const CustomerTickets = ({ onAddTask, tickets}) => {
+
+
 
     return (
         <div className='col-span-12 md:col-span-9 '>
@@ -14,7 +13,7 @@ const ticketData = use(fetchPromise);
                 <div id='customer-tickets-container' className="customer-tickets-card grid grid-cols-12 gap-5">
                     {/* card */}
                     {
-                        <TicketCard onAddTask={onAddTask} ticketData={ticketData}></TicketCard>
+                    <TicketCard tickets={tickets} onAddTask={onAddTask} ></TicketCard>
                     }
                 </div>
             </div>

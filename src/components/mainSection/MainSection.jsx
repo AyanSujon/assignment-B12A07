@@ -6,7 +6,7 @@ import TaskStatus from './TaskStatus';
 
 
 
-const MainSection = ({fetchPromise, onAddTask, tasks, onCompleteTask}) => {
+const MainSection = ({ onAddTask, tasks, onCompleteTask, tickets}) => {
 
 
 
@@ -16,7 +16,7 @@ const MainSection = ({fetchPromise, onAddTask, tasks, onCompleteTask}) => {
         <Container>
             <div className='grid gap-5 grid-cols-12 py-10 '>
             <Suspense fallback={<div  className='grid col-span-12 md:col-span-9 justify-center items-center'><span className="loading loading-spinner loading-xl"></span></div>}>
-                <CustomerTickets onAddTask={onAddTask} fetchPromise={fetchPromise}></CustomerTickets>
+                <CustomerTickets tickets={tickets} onAddTask={onAddTask}></CustomerTickets>
             </Suspense>
             <TaskStatus onCompleteTask={onCompleteTask} tasks={tasks}></TaskStatus>
             </div>

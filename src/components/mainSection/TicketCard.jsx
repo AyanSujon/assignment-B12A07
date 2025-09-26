@@ -5,25 +5,16 @@ import cardCalander from "../../assets/ri_calendar-line.png"
 
 
 
-const TicketCard = ({ticketData,  onAddTask}) => {
+const TicketCard = ({ onAddTask, tickets}) => {
 
-    // console.log(ticketData);
-
-
-    
-    const handleClick = ()=> {
-        // console.log(" Button clicked");
-
-
-    }
 
     return (
-        ticketData.map(ticket => 
+        tickets.map(ticket => 
 
                     <div 
                     key={ticket.id}
                     onClick={() => {
-                        onAddTask (ticket), handleClick()
+                        onAddTask (ticket)
                     }}
                     className="card bg-base-100 col-span-12 md:col-span-6">
                         <div className="card-body">
