@@ -76,14 +76,42 @@ const [state, setState] = useState(initialValue);
 
 
 
+>
+>>
+>>>
+>>>
+
+
+
+How can you share state between components in React?
+
+>
+>>
+>> React এ আমরা ২ ভাবে state share করতে পারি, 
+১. props
+>>
+>>Props হলো parent component থেকে child component-এ data পাঠানোর প্রক্রিয়া। এর মাধ্যমে যেকোনো JavaScript value (যেমন object, array, এমনকি function) পাঠানো যায়। এবং, child component কেবল props read করতে পারে, কিন্তু এটি পরিবর্তন করতে পারে না।
 
 
 
 
 
+>
+>
 
 
+২. Lifting State Up: 
 
+State সাধারণত parent component-এ রাখা হয়। পরে props-এর মাধ্যমে child component-গুলো সেই state ব্যবহার করতে পারে।
+যদি child component state পরিবর্তন করতে চায়, তাহলে parent থেকে একটি function props হিসেবে পাঠানো হয়।
+এই প্রক্রিয়ার মাধ্যমে child component থেকে parent component-এর state পরিবর্তন করা সম্ভব হয়।
+
+>
+
+
+>
+>How is event handling done in React?
+>
 
 
 
