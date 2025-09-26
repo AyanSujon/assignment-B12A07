@@ -5,9 +5,13 @@ JSX (JavaScript XML) হলো JavaScript-এর একটি extension বা J
 
  why is it used?
 > সহজে UI লেখা যায়
+> 
 > JavaScript এবং HTML একসাথে ব্যবহার করা যায়
+> 
 > React DOM-এর সাথে কাজ করা সহজ হয়
+> 
 > পুনরায় ব্যবহারযোগ্য কম্পোনেন্ট তৈরী করা যায়।
+> 
 > সহজে কোড পড়া যায়
 
  
