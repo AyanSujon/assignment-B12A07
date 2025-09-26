@@ -5,7 +5,7 @@ import Footer from './components/footer/Footer'
 import Hero from './components/hero/Hero'
 import MainSection from './components/mainSection/MainSection'
 import Navbar from './components/navbar/Navbar'
-  import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 
@@ -32,6 +32,8 @@ const fetchPromise = fetchTicket();
   const onAddTask = (ticket) => {
     setTasks((prev) => [...prev, ticket]);
     toast(`Added "${ticket.title}" to Task Status!!`);
+    // console.log(tasks);
+
   };
 
 
@@ -44,7 +46,7 @@ const fetchPromise = fetchTicket();
         </nav>
 
           <section className='bg-[#F5F5F5]'>
-          <Hero></Hero>
+          <Hero tasks={tasks}></Hero>
           </section>
       </header>
 
